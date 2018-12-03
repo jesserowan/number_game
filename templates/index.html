@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }} " >
+    <title>Number Game</title>
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>
+            Welcome to the number game
+        </h1>
+        <h2>
+            I'm thinking of a number between 1 and 100. Can you guess it?
+        </h2>
+        {% if session['too_low'] == True: %}
+        <div class="container">
+            <p>Too low!</p>
+        </div>
+        {% endif %}
+        {% if session['too_high'] == True: %}
+        <div class="container">
+            <p>Too high!</p>
+        </div>
+        {% endif %}
+        {% if session['correct'] == True: %}
+        <div class="container success">
+            <p>Correct!</p>
+            <div class="abc">
+                <a class="btn btn-dark c" href="/clear">Play again!</a>
+            </div>
+        </div>
+        {% endif %}
+        <form action="/guess" method="post">
+            <div class="form-group">
+                <input name="guess" class="form-control" placeholder="Type your best guess">
+                <input type="submit" class="btn btn-dark a" href="/guess">
+            </div>
+        </form>
+        <div class="abc">
+            <a class="btn btn-dark b" href="/clear">Clear Cookies</a>
+        </div>
+    </div>
+</body>
+</html>

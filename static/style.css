@@ -1,0 +1,53 @@
+.jumbotron {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+form {
+    margin-top: 50px;
+    display: block;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.a {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+.abc {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.b {
+    width: 19%
+}
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 132, 132);
+    margin: 0 40%;
+    height: 100px;
+    
+}
+p {
+    margin-top: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    display: block;
+}
+form {
+    margin-top: 10px;
+}
+.success {
+    background-color: rgb(121, 211, 121);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+.c {
+    width: 100%;
+    margin-bottom: 20px;
+}
